@@ -1,4 +1,4 @@
-import 'package:animated_stack_widget/animated_stack.dart';
+import 'package:animated_stack_widget/animated_stack_widget.dart';
 import 'package:animated_stack_widget_example/sliding_item.dart';
 import 'package:flutter/material.dart';
 
