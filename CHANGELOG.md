@@ -1,3 +1,8 @@
+## [0.0.2] - 17/05/2021
+
+* Expose some more List methods on AnimatedStackManager (any, isEmpty, isNotEmpty).
+* Allow the animation Duration to be controlled when using the AnimatedStackManager.
+
 ## [0.0.1+2] - 13/05/2021
 
 * Fix import in example.
