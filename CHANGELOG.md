@@ -1,3 +1,7 @@
+## [0.0.2+1] - 28/05/2021
+
+* Add a demo gif to the description.
+
 ## [0.0.2] - 17/05/2021
 
 * Expose some more List methods on AnimatedStackManager (any, isEmpty, isNotEmpty).

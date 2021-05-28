@@ -4,7 +4,9 @@ Makes it easy to animate the addition & removal of Stack children in a similar w
 
 ## Getting Started
 
-See the example application for a demo app with a slide-in and fade-out animation.
+See the `example/` directory for a demo app which results in the following:
+
+![Example](https://github.com/rorystephenson/project_gifs/blob/master/animated_stack_demo.gif)
 
 ## Credits
 
