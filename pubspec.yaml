@@ -1,6 +1,6 @@
 name: animated_stack_widget
 description: A Stack widget which supports animated addition/removal of children.
-version: 0.0.2+1
+version: 0.0.3
 homepage: https://github.com/rorystephenson/animated_stack
 
 environment:

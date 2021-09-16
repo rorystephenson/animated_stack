@@ -1,3 +1,7 @@
+## [0.0.3] - 16/09/2021
+
+* Add removeWhere to the AnimatedStackManager
+
 ## [0.0.2+1] - 28/05/2021
 
 * Add a demo gif to the description.

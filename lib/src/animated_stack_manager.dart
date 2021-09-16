@@ -59,6 +59,28 @@ class AnimatedStackManager<E> {
     _items.clear();
   }
 
+  void removeWhere(bool Function(E) test, {Duration? duration}) {
+    var offsetDueToRemovals = 0;
+    final itemsLength = _items.length;
+
+    for (var i = 0; i <= itemsLength - 1; i++) {
+      final removalIndex = i - offsetDueToRemovals;
+      final item = _items[removalIndex];
+      if (!test(item)) continue;
+
+      _items.removeAt(removalIndex);
+      _animatedStack!.removeItem(
+        removalIndex,
+        (BuildContext context, Animation<double> animation) {
+          return removedItemBuilder(item, context, animation);
+        },
+        duration: duration ?? this.duration,
+      );
+
+      offsetDueToRemovals++;
+    }
+  }
+
   int get length => _items.length;
 
   E operator [](int index) => _items[index];

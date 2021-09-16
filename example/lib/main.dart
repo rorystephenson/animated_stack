@@ -59,16 +59,35 @@ class _AnimatedStackExampleHomePageState
           onTapUp: (tapDetails) {
             _insert(tapDetails.localPosition.dx, tapDetails.localPosition.dy);
           },
-          child: Container(
-            child: LayoutBuilder(
-              builder: (context, constraints) => AnimatedStack(
-                key: _animatedStackKey,
-                initialItemCount: 0,
-                itemBuilder: (context, index, animation) =>
-                    _buildItem(context, index, animation, constraints),
+          child: Column(children: [
+            Expanded(
+              child: Container(
+                child: LayoutBuilder(
+                  builder: (context, constraints) => AnimatedStack(
+                    key: _animatedStackKey,
+                    initialItemCount: 0,
+                    itemBuilder: (context, index, animation) =>
+                        _buildItem(context, index, animation, constraints),
+                  ),
+                ),
               ),
             ),
-          ),
+            Padding(
+              padding: EdgeInsets.all(8),
+              child: TextButton(
+                onPressed: () {
+                  final halfWidth = MediaQuery.of(context).size.width / 2;
+                  _animatedStackManager
+                      .removeWhere((itemData) => itemData.x < halfWidth);
+                },
+                child: Text('Remove popups with\n left edge in left half'),
+                style: ButtonStyle(
+                  foregroundColor: MaterialStateProperty.all(Colors.white),
+                  backgroundColor: MaterialStateProperty.all(Colors.blue),
+                ),
+              ),
+            ),
+          ]),
         ),
       ),
     );
