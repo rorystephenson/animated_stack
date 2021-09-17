@@ -81,6 +81,8 @@ class AnimatedStackManager<E> {
     }
   }
 
+  bool contains(E item) => _items.contains(item);
+
   int get length => _items.length;
 
   E operator [](int index) => _items[index];

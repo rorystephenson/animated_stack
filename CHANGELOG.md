@@ -1,3 +1,7 @@
+## [0.0.4] - 16/09/2021
+
+* Add contains to the AnimatedStackManager
+
 ## [0.0.3] - 16/09/2021
 
 * Add removeWhere to the AnimatedStackManager
